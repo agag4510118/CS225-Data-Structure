@@ -1,0 +1,25 @@
+#include"scene.h"
+
+Scene::Scene(int max)
+{
+	 maximage = max;
+	sc = new Image[max];
+	for (int i=0; i < max; i ++)
+	{
+		sc[i]=NULL;
+		xcord[i]=0;
+		ycord[i]=0;
+	}
+}
+
+Scene::Scene(const Scene & source)
+{
+	maximage = source.maximage;
+	sc = new Image[maximage];
+	for (int i = 0; i < maximage;i++)
+	{
+		sc[i]=source.sc[i];
+		xcord[i]=source.xcord[i];
+		ycord[i]=source.ycord[i];
+	}
+}

@@ -1,0 +1,16 @@
+[Required Files]
+main.cpp
+rgbapixel.cpp
+rgbapixel.h
+
+[Testing Files]
+unit_tests.cpp
+Makefile
+png.cpp
+png.h
+
+[Libraries]
+
+[Pre-Make Commands]
+rename_main main.cpp __student_main
+

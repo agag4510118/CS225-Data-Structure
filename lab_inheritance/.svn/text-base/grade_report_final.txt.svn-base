@@ -1,0 +1,27 @@
+Grading revision r13037 by limiao2, dated 2015-09-16 21:59:23.000178542 -0500 CDT
+Monad Autograder
+Testing lab_inheritance at 2015-09-21 00:47:06
+
+"C++ : Where friends have access to your private members." ~ Gavin Russell Baker
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_virtual_perim  . . . . . . [10 pts] - passed
+test_virtual_area . . . . . . . [10 pts] - passed
+test_destructor (asan)  . . . . [20 pts] - passed
+test_constructor  . . . . . . . [10 pts] - passed
+test_drawable_destructor (asan) [10 pts] - passed
+test_truck_draw . . . . . . . . [10 pts] - passed
+test_slicing  . . . . . . . . . [20 pts] - passed
+test_flower_destructor (asan) . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

@@ -1,0 +1,197 @@
+/**
+ * @file kdtree.cpp
+ * Implementation of KDTree class.
+ */
+
+template<int Dim>
+bool KDTree<Dim>::smallerDimVal(const Point<Dim> & first, const Point<Dim> & second, int curDim) const
+{
+    /**
+     * @todo Implement this function!
+     */
+	if (curDim >= Dim)
+		return false;
+
+        if(first[curDim]<second[curDim])
+            return true;
+        else if (first[curDim]==second[curDim])
+            return (first<second);
+        else
+            return false; 
+}
+
+
+template<int Dim>
+bool KDTree<Dim>::shouldReplace(const Point<Dim> & target, const Point<Dim> & currentBest, const Point<Dim> & potential) const
+{
+    /**
+     * @todo Implement this function!
+     */
+
+    int distancePotential = 0;
+    int distanceCurrentBest = 0;
+    
+    for (int i =0; i<Dim; i++) {
+        distancePotential += pow((target[i]-potential[i]),2);
+        distanceCurrentBest += pow((target[i]-currentBest[i]),2);
+    }
+    
+    if(distancePotential<distanceCurrentBest)
+        return true;
+    else if (distancePotential==distanceCurrentBest)
+        return (potential<currentBest);
+    else
+    	return false;
+}
+
+template<int Dim>
+KDTree<Dim>::KDTree(const vector< Point<Dim> > & newPoints)
+{
+    /**
+     * @todo Implement this function!
+     */
+    
+    int n = (newPoints.size()-1)/2;
+    int d = 0;
+    points = newPoints;
+    if(points.size()!=0)
+    	kdtreehelper(points,0,points.size()-1,d);
+    
+}
+
+template<int Dim>
+int KDTree<Dim>::partition(vector< Point<Dim> > & p, int left, int right, int index, int d)
+{
+    Point<Dim> pivotvalue = p[index];
+    
+    iter_swap(p.begin()+index, p.begin()+right);
+    
+    int storeindex = left;
+    
+    for(int i =left; i<right;i++)
+    {
+        if (smallerDimVal(p[i],pivotvalue,d)) {
+            iter_swap(p.begin()+storeindex,p.begin()+i);
+            storeindex++;
+        }
+    }
+    
+    iter_swap(p.begin()+right,p.begin()+storeindex);
+    return storeindex;
+}
+
+template<int Dim>
+Point<Dim> KDTree<Dim>::select(vector< Point<Dim> > & p, int left, int right, int n, int d)
+{
+    if (left >= right)
+        return p[left];
+    
+    int pivotindex = (left+right)/2;
+    pivotindex = partition(p,left,right,pivotindex,d);
+    
+    if (n==pivotindex)
+        return p[n];
+    else if (n<pivotindex)
+        return select(p,left,pivotindex-1,n,d);
+    else
+        return select(p,pivotindex+1,right,n,d);
+    
+}
+
+template<int Dim>
+void KDTree<Dim>::kdtreehelper(vector< Point<Dim> > & newPoints,int left, int right, int d)
+{
+	// Base Case
+   // if(left == right)
+        //return;
+    if (right <= left)
+	return;
+    int n = (left+right)/2;
+    points[n] = select(newPoints,left,right,n,d);
+    
+    //Recursion
+    kdtreehelper(newPoints,left,n-1,(d+1)%Dim);
+    kdtreehelper(newPoints,n+1,right,(d+1)%Dim);
+}
+
+
+template<int Dim>
+Point<Dim> KDTree<Dim>::findNearestNeighbor(const Point<Dim> & query) const
+{
+   
+   //if (points.size()!=0)
+  	 return findhelper(query,0,points.size()-1,0);
+ //  else
+	//return Point<Dim>();
+}
+
+template<int Dim>
+int KDTree<Dim>::distance(const Point<Dim> first, const Point<Dim> second) const
+{
+    int dis = 0;
+    
+    for (int i =0;i<Dim;i++)
+    {
+        dis += (first[i]-second[i])*(first[i]-second[i]);
+    }
+    
+    return dis;
+}
+
+template<int Dim>
+Point<Dim> KDTree<Dim>::findhelper(const Point<Dim> & query, int left, int right, int d) const
+{
+    int m = (left+right)/2;
+    
+    // Base case
+    if (left >= right) {
+        return points[left];
+    }
+    
+    // Fitst step
+    // Traverse down the tree
+    Point<Dim> currentbest;
+//Point<Dim> sub;
+ 
+    if (smallerDimVal(query,points[m],d)) {
+        currentbest = findhelper(query,left,m-1,(d+1)%Dim);
+    }
+    else{
+        currentbest=findhelper(query,m+1,right,(d+1)%Dim);
+    }
+
+    //Traverse back up the k-d tree
+    // parent
+    if(shouldReplace(query,currentbest,points[m])){
+        currentbest = points[m];
+    }
+    
+    //distance from query to currentbest
+    int r = distance(query,currentbest);
+    
+    // the distance from query to splitting plane
+    int dist = pow((query[d]-points[m][d]),2);
+    
+    // If dist < =r , we need to go other subtree
+    Point<Dim> sub;
+    
+    if(dist<=r)
+    {
+
+       if (smallerDimVal(query,points[m],d)) {
+            sub = findhelper(query,m+1,right,(d+1)%Dim);
+        }
+        else{
+            sub=findhelper(query,left,m-1,(d+1)%Dim);
+       }
+
+        if (shouldReplace(query,currentbest,sub)) {
+            currentbest = sub;
+        }
+        
+    }
+    
+    // We find the nearest
+    return currentbest;
+   
+}

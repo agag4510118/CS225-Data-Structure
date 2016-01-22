@@ -1,0 +1,23 @@
+Grading revision r25486 by limiao2, dated 2015-10-11 22:13:33.000701882 -0500 CDT
+Monad Autograder
+Testing lab_trees at 2015-10-12 02:08:28
+
+"I think it's hacky, but maybe it's just good." ~ Sean Massung
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_isOrdered  . [33 pts] - passed
+test_mirror . . . [33 pts] - passed
+test_printPaths . [34 pts] - passed
+test_sumDistances [25 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 125
+

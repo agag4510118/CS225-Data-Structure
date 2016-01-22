@@ -1,0 +1,22 @@
+Grading revision r2829 by limiao2, dated 2015-08-30 16:41:06.000841238 -0500 CDT
+Monad Autograder
+Testing lab_intro at 2015-08-31 00:33:12
+
+"The trouble with programmers is that you can never tell what a programmer is doing until it's too late." ~ Seymour Cray
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testBrighten  . [33 pts] - passed
+testCrosshairs  [33 pts] - passed
+testBlendImages [34 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

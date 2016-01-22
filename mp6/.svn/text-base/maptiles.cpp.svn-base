@@ -1,0 +1,56 @@
+/**
+ * @file maptiles.cpp
+ * Code for the maptiles function.
+ */
+	 			
+#include <iostream>
+#include <map>
+#include "maptiles.h"
+#include<vector>
+
+using namespace std;
+
+MosaicCanvas * mapTiles(SourceImage const & theSource, vector<TileImage> const & theTiles)
+{
+    /**
+     * @todo Implement this function!
+     */
+    
+    // Create a new dynamicallt allocated MosaicCanvas
+    int row = theSource.getRows();
+    int column = theSource.getColumns();
+    MosaicCanvas * result = new MosaicCanvas(row,column);
+    
+    // Create points for Kdtree
+    vector< Point<3> > points;
+    map<Point<3>,TileImage> t;
+    
+    RGBAPixel temp;
+    Point<3> p;
+    
+    // Mappi
+	for(auto it = theTiles.begin() ; it != theTiles.end(); ++it)
+    {
+        temp = it->getAverageColor();
+        p = Point<3>(temp.red,temp.green,temp.blue);
+        points.push_back(p);
+        t[p] = *it;
+    }
+    
+    // Kdtree
+    KDTree<3> kdtree(points);
+    Point<3> nearest;
+    
+    for(int i =0; i < row; i++){
+        for (int j=0; j<column; j++) {
+            temp = theSource.getRegionColor(i,j);
+            p = Point<3>(temp.red,temp.green,temp.blue);
+            nearest = kdtree.findNearestNeighbor(p);
+            
+            (*result).setTile(i,j,t[nearest]);
+        }
+    }
+    
+    
+	return result;
+}

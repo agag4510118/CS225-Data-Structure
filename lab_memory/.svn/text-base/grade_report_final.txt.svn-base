@@ -1,0 +1,24 @@
+Grading revision r7785 by limiao2, dated 2015-09-09 21:25:59.00058936 -0500 CDT
+Monad Autograder
+Testing lab_memory at 2015-09-14 01:30:49
+
+"We are what we repeatedly do. Excellence, then, is not an act, but a habit." ~ Aristotle
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_constructor (asan) [5 pts]  - passed
+test_allocate (asan)  . [5 pts]  - passed
+test_printrooms (asan)  [20 pts] - passed
+test_any_output . . . . [30 pts] - passed
+test_correct_output . . [40 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

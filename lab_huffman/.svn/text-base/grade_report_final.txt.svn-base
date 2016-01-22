@@ -1,0 +1,29 @@
+Grading revision r28773 by limiao2, dated 2015-10-18 19:52:22.000390439 -0500 CDT
+Monad Autograder
+Testing lab_huffman at 2015-10-19 00:29:46
+
+"Computer Science is no more about computers than astronomy is about telescopes." ~ E. Dijkstra
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_encoder_binary_4  . . . . [20 pts] - passed
+test_encoder_binary_8  . . . . [20 pts] - passed
+test_encoder_valgrind_2 (asan) [6 pts]  - passed
+test_encoder_writetree_4 . . . [2 pts]  - passed
+test_encoder_writetree_8 . . . [2 pts]  - passed
+test_decode_4  . . . . . . . . [20 pts] - passed
+test_decode_8  . . . . . . . . [20 pts] - passed
+test_decode_readtree_4 . . . . [2 pts]  - passed
+test_decode_readtree_8 . . . . [2 pts]  - passed
+test_the_works (asan)  . . . . [6 pts]  - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

@@ -1,0 +1,8 @@
+Grading revision r10759 by limiao2, dated 2015-09-14 21:11:08.000427325 -0500 CDT
+Monad Autograder
+Testing mp2 at 2015-09-15 00:35:44
+
+"Computers are like Old Testament gods; lots of rules and no mercy." ~ Joseph Campbell
+
+Setting up test environment...
+Error: /dev/shm/cs225student/autograder/temp/mp2/scene.h does not exist.

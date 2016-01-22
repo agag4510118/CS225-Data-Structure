@@ -1,0 +1,35 @@
+Grading revision r2830 by limiao2, dated 2015-08-30 16:41:39.000835577 -0500 CDT
+Monad Autograder
+Testing mp1 at 2015-09-02 00:36:36
+
+"We are what we repeatedly do. Excellence, then, is not an act, but a habit." ~ Aristotle
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+RGBAPixel_default_ctor [5 pts]  - passed
+RGBAPixel_three_ctor . [10 pts] - passed
+in_01_png  . . . . . . [5 pts]  - passed
+in_02_png  . . . . . . [5 pts]  - passed
+in_03_png  . . . . . . [5 pts]  - passed
+in_04_png  . . . . . . [5 pts]  - passed
+in_05_png  . . . . . . [5 pts]  - passed
+in_06_png  . . . . . . [5 pts]  - passed
+in_07_png  . . . . . . [5 pts]  - passed
+in_08_png  . . . . . . [5 pts]  - passed
+in_09_png  . . . . . . [5 pts]  - passed
+in_10_png  . . . . . . [5 pts]  - passed
+in_11_png  . . . . . . [5 pts]  - passed
+in_12_png  . . . . . . [5 pts]  - passed
+in_13_png  . . . . . . [5 pts]  - passed
+Makefile . . . . . . . [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

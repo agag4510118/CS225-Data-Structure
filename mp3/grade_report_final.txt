@@ -1,0 +1,158 @@
+Grading revision r21182 by limiao2, dated 2015-10-02 17:01:16.000333547 -0500 CDT
+Monad Autograder
+Testing mp3 at 2015-10-03 00:31:06
+
+"Doing more things faster is no substitute for doing the right things." ~ Stephen R. Covey
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testInsertFront  . . . . . . . . [2 pts]  - passed
+testInsertBack . . . . . . . . . [2 pts]  - passed
+testDestructor10 (asan)  . . . . [3 pts]  - passed
+testDestructor37 (asan)  . . . . [3 pts]  - passed
+testReverse20_size . . . . . . . [1 pts]  - passed
+testReverse20_forward  . . . . . [1 pts]  - passed
+testReverse20_backward . . . . . [1 pts]  - passed
+testReverse37_size . . . . . . . [1 pts]  - passed
+testReverse37_forward  . . . . . [1 pts]  - passed
+testReverse37_backward . . . . . [1 pts]  - passed
+testReverseEmpty (asan)  . . . . [1 pts]  - FAILED: Memory errors detected by ASAN
+testReverse20_memory (asan)  . . [1 pts]  - passed
+testReverseNth20_2_size  . . . . [1 pts]  - passed
+testReverseNth20_2_forward . . . [1 pts]  - passed
+testReverseNth20_2_backward  . . [1 pts]  - passed
+testReverseNth37_4_size  . . . . [1 pts]  - passed
+testReverseNth37_4_forward . . . [1 pts]  - passed
+testReverseNth37_4_backward  . . [1 pts]  - passed
+testReverseNth37_37  . . . . . . [1 pts]  - FAILED: unit_tests.cpp:115: List does not match solution with forward traversal
+testReverseNth37_4_memory (asan) [1 pts]  - passed
+testReverseNthEmpty (asan) . . . [1 pts]  - FAILED: Memory errors detected by ASAN
+testWaterfall4_size  . . . . . . [1 pts]  - passed
+testWaterfall4_forward . . . . . [1 pts]  - passed
+testWaterfall4_backward  . . . . [2 pts]  - passed
+testWaterfall7_size  . . . . . . [1 pts]  - passed
+testWaterfall7_forward . . . . . [1 pts]  - passed
+testWaterfall7_backward  . . . . [2 pts]  - passed
+testWaterfall12_size . . . . . . [1 pts]  - passed
+testWaterfall12_forward  . . . . [1 pts]  - passed
+testWaterfall12_backward . . . . [2 pts]  - passed
+testWaterfall7_memory (asan) . . [3 pts]  - passed
+testWaterfall7_empty (asan)  . . [3 pts]  - passed
+testSplit5_this_size . . . . . . [1 pts]  - passed
+testSplit5_this_forward  . . . . [1 pts]  - passed
+testSplit5_this_backward . . . . [1 pts]  - passed
+testSplit5_split_size  . . . . . [1 pts]  - passed
+testSplit5_split_forward . . . . [1 pts]  - passed
+testSplit5_split_backward  . . . [1 pts]  - passed
+testSplit5_mem (asan)  . . . . . [3 pts]  - passed
+testMerge_size . . . . . . . . . [1 pts]  - passed
+testMerge_forward  . . . . . . . [1 pts]  - passed
+testMerge_backward . . . . . . . [1 pts]  - passed
+testMerge_mem (asan) . . . . . . [3 pts]  - passed
+testSort16p_s  . . . . . . . . . [1 pts]  - passed
+testSort16p_f  . . . . . . . . . [2 pts]  - passed
+testSort16p_b  . . . . . . . . . [2 pts]  - passed
+testSort20p_s  . . . . . . . . . [1 pts]  - passed
+testSort20p_f  . . . . . . . . . [2 pts]  - passed
+testSort20p_b  . . . . . . . . . [2 pts]  - passed
+testSort27p_s  . . . . . . . . . [1 pts]  - passed
+testSort27p_f  . . . . . . . . . [2 pts]  - passed
+testSort27p_b  . . . . . . . . . [2 pts]  - passed
+testSortEmpty  . . . . . . . . . [5 pts]  - passed
+testSort259p_s . . . . . . . . . [1 pts]  - passed
+testSort259p_f . . . . . . . . . [2 pts]  - passed
+testSort259p_b . . . . . . . . . [2 pts]  - passed
+testSortMemLeak (asan) . . . . . [5 pts]  - passed
+testSortNlogN  . . . . . . . . . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 97
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+testReverseEmpty (run under asan) [1 points]
+Result: FAILED: Memory errors detected by ASAN
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running testReverseEmpty [worth 1 points, output below]
+< 9 8 7 6 5 4 3 2 1 0 >
+ASAN:SIGSEGV
+=================================================================
+==15416==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x0000006b9760 bp 0x7ffff367c5d0 sp 0x7ffff367c040 T0)
+    #0 0x6b975f in List<int>::reverse(List<int>::ListNode*&, List<int>::ListNode*&) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x6b975f)
+    #1 0x689632 in List<int>::reverse() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x689632)
+    #2 0x64ac53 in testReverse(int, check_t, bool) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x64ac53)
+    #3 0x64f988 in proxy_test::testReverseEmpty(util::sizedpipestream<512ul>&) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x64f988)
+    #4 0x4e6db8 in monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4e6db8)
+    #5 0x4ce1c3 in proxy::test_execution::child_test() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4ce1c3)
+    #6 0x4bfd19 in proxy::test_execution::child() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4bfd19)
+    #7 0x4ba5d2 in proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4ba5d2)
+    #8 0x4b4567 in proxy::RunTests::run_single_test(char const*) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4b4567)
+    #9 0x4b3707 in proxy::RunTests::execute_by_mode() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4b3707)
+    #10 0x4afe69 in proxy::RunTests::execute() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4afe69)
+    #11 0x4adf70 in main (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4adf70)
+    #12 0x319e61ed5c in __libc_start_main (/lib64/libc.so.6+0x319e61ed5c)
+    #13 0x4a6afc in _start (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4a6afc)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ??:0 List<int>::reverse(List<int>::ListNode*&, List<int>::ListNode*&)
+==15416==ABORTING
+Result: FAILED:
+Memory Errors Detected by ASAN
+
+----------------------------------------------------------------
+testReverseNth37_37 [1 points]
+Result: FAILED: unit_tests.cpp:115: List does not match solution with forward traversal
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+< 36 >
+
+----------------------------------------------------------------
+testReverseNthEmpty (run under asan) [1 points]
+Result: FAILED: Memory errors detected by ASAN
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running testReverseNthEmpty [worth 1 points, output below]
+< 9 >
+
+=================================================================
+==15439==ERROR: LeakSanitizer: detected memory leaks
+
+Indirect leak of 216 byte(s) in 9 object(s) allocated from:
+    #0 0x42208b in operator new(unsigned long) /dev/shm/225/lm35/src/llvm/projects/compiler-rt/lib/asan/asan_new_delete.cc:62:35
+    #1 0x688e35 in List<int>::insertBack(int const&) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x688e35)
+    #2 0x64e290 in testReverseNth(int, int, check_t, bool) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x64e290)
+    #3 0x6506a9 in proxy_test::testReverseNthEmpty(util::sizedpipestream<512ul>&) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x6506a9)
+    #4 0x4e6db8 in monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4e6db8)
+    #5 0x4ce1c3 in proxy::test_execution::child_test() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4ce1c3)
+    #6 0x4bfd19 in proxy::test_execution::child() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4bfd19)
+    #7 0x4ba5d2 in proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4ba5d2)
+    #8 0x4b4567 in proxy::RunTests::run_single_test(char const*) (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4b4567)
+    #9 0x4b3707 in proxy::RunTests::execute_by_mode() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4b3707)
+    #10 0x4afe69 in proxy::RunTests::execute() (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4afe69)
+    #11 0x4adf70 in main (/dev/shm/cs225student/autograder/monad/monad/mp3_grade/proxy-asan+0x4adf70)
+    #12 0x319e61ed5c in __libc_start_main (/lib64/libc.so.6+0x319e61ed5c)
+
+SUMMARY: AddressSanitizer: 216 byte(s) leaked in 9 allocation(s).
+Result: FAILED:
+Memory Leaks Detected by ASAN
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 97
+

@@ -1,0 +1,37 @@
+#include<iostream>
+#include"rgbapixel.h"
+#include"png.h"
+#include<algorithm>
+
+using namespace std;
+
+PNG rotateIMage(PNG original)
+{
+	RGBAPixel middle;
+	for (size_t x = 0; x < original.width(); x++)
+	for (size_t y = 0; y < original.height(); y++)
+	{
+	
+	size_t mirror = original.heiglt()-y;
+	middle = *original(x,y);
+	*original(x,y)=*original(mirror);
+	*original(mirror) = middle; 
+	
+	}
+	return original;
+}
+
+int main()
+{
+	// OPen a new PNG image from the file in.png
+	PNG inimage("in.png");
+
+	//ROtate the image
+	inimage = rotateImage(inimage);
+
+	//Save the modified image to a file out.png
+	inimage.writeToFile("out.png");
+
+
+return 0;
+}

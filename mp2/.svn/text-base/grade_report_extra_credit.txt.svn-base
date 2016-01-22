@@ -1,0 +1,8 @@
+Grading revision r4594 by ruan3, dated 2015-09-01 20:53:43.00096459 -0500 CDT
+Monad Autograder
+Testing mp2.1 at 2015-09-09 01:26:28
+
+"Anything that can go wrong will go wrong." ~ Murphy's Law
+
+Setting up test environment...
+Error: /dev/shm/cs225student/autograder/temp/mp2/Makefile does not exist.

@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/fa15-cs225/!svn/ver/38288/_shared/monad/source
+END
+monad.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/fa15-cs225/!svn/ver/38288/_shared/monad/source/monad.cpp
+END
+TODO.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/TODO.txt
+END
+svn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/fa15-cs225/!svn/ver/38288/_shared/monad/source/svn.cpp
+END
+eigendirs.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/eigendirs.txt
+END
+README_tests.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/README_tests.txt
+END
+Makefile.proxy
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/Makefile.proxy
+END
+quotes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/quotes.txt
+END
+pipestream.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/pipestream.h
+END
+README_config.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/README_config.txt
+END
+util.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/util.h
+END
+filemap.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/filemap.h
+END
+svn_libsvn.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/fa15-cs225/!svn/ver/38288/_shared/monad/source/svn_libsvn.cpp
+END
+monad_shared.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/monad_shared.cpp
+END
+NOTES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/NOTES.txt
+END
+proxy.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/proxy.h
+END
+proxy_fit_curve.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/proxy_fit_curve.cpp
+END
+help.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/help.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/fa15-cs225/!svn/ver/38288/_shared/monad/source/Makefile
+END
+config.ini
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/config.ini
+END
+monad.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/monad.h
+END
+ccmonad.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/ccmonad.cpp
+END
+eigenfiles.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/eigenfiles.txt
+END
+pipestream.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/pipestream.cpp
+END
+svn.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/fa15-cs225/!svn/ver/38288/_shared/monad/source/svn.h
+END
+filemap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/filemap.cpp
+END
+util.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/fa15-cs225/!svn/ver/37536/_shared/monad/source/util.cpp
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/LICENSE.txt
+END
+proxy.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/proxy.cpp
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/.gitignore
+END
+random.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/random.h
+END
+monad_shared.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/monad_shared.h
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/fa15-cs225/!svn/ver/778/_shared/monad/source/README.txt
+END

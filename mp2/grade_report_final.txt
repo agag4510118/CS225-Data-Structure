@@ -1,0 +1,262 @@
+Grading revision r12378 by limiao2, dated 2015-09-15 22:23:46.00003873 -0500 CDT
+Monad Autograder
+Testing mp2 at 2015-09-16 00:35:33
+
+"All that is gold does not glitter, / Not all those who wander are lost;" ~ Bilbo Baggins
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+InvertColorsEven . . . . . . . . . [8 pts] - passed
+FlipLeftEven . . . . . . . . . . . [4 pts] - passed
+FlipLeftOdd  . . . . . . . . . . . [4 pts] - passed
+AdjustBrightnessEven . . . . . . . [3 pts] - passed
+AdjustBrightnessEven2  . . . . . . [3 pts] - passed
+AdjustBrightnessEven3  . . . . . . [3 pts] - passed
+ImageMakefile  . . . . . . . . . . [5 pts] - passed
+Valgrind1 (asan) . . . . . . . . . [5 pts] - passed
+AddPictureValidIndex . . . . . . . [2 pts] - passed
+AddPictureInvalidIndex . . . . . . [2 pts] - passed
+ImageAssignmentOperator  . . . . . [2 pts] - passed
+SceneGetPictureInvalidIndex  . . . [2 pts] - FAILED: unit_tests.cpp:120: Assertion (NULL == image) failed
+SceneChangeMaxLayersLarger . . . . [2 pts] - FAILED: Segmentation fault
+SceneChangeMaxLayersSmaller (asan) [1 pts] - passed
+SceneChangeMaxLayersInvalidChange  [2 pts] - passed
+SceneCopyCtor  . . . . . . . . . . [2 pts] - passed
+SceneCopyCtor2 . . . . . . . . . . [2 pts] - passed
+SceneAssignmentOperator  . . . . . [2 pts] - passed
+SceneAssignmentOperator2 . . . . . [2 pts] - passed
+SceneChangeLayer . . . . . . . . . [2 pts] - passed
+SceneChangeLayerInvalid  . . . . . [2 pts] - FAILED: Segmentation fault
+SceneDrawScene . . . . . . . . . . [3 pts] - passed
+SceneDrawScene2  . . . . . . . . . [3 pts] - passed
+SceneDrawScene3  . . . . . . . . . [3 pts] - passed
+SceneDrawScene4  . . . . . . . . . [3 pts] - passed
+SceneDrawSceneChangeLayer  . . . . [2 pts] - passed
+SceneDrawSceneDeletePicture  . . . [2 pts] - passed
+SceneDrawSceneTranslate  . . . . . [2 pts] - passed
+SceneDrawSceneTranslate2 . . . . . [2 pts] - passed
+SceneTranslateInvalid  . . . . . . [2 pts] - FAILED: Aborted
+SceneTranslateInvalid2 . . . . . . [1 pts] - passed
+SceneDeletePictureInvalid  . . . . [2 pts] - FAILED: Segmentation fault
+Valgrind2 (asan) . . . . . . . . . [5 pts] - passed
+Valgrind3 (asan) . . . . . . . . . [5 pts] - FAILED: Memory errors detected by ASAN
+SceneMakefile  . . . . . . . . . . [5 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 85
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+SceneGetPictureInvalidIndex [2 points]
+Result: FAILED: unit_tests.cpp:120: Assertion (NULL == image) failed
+Took 0ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+SceneChangeMaxLayersLarger [2 points]
+Result: FAILED: Segmentation fault
+Took 0ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+SceneChangeLayerInvalid [2 points]
+Result: FAILED: Segmentation fault
+Took 0ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+invalid index
+
+----------------------------------------------------------------
+SceneTranslateInvalid [2 points]
+Result: FAILED: Aborted
+Took 0ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+invalid index 
+invalid index 
+*** glibc detected *** ./proxy: double free or corruption (out): 0x00000000016b6190 ***
+======= Backtrace: =========
+/lib64/libc.so.6[0x30c0075e66]
+/lib64/libc.so.6[0x30c00789ba]
+./proxy[0x453cce]
+./proxy[0x453fc1]
+./proxy[0x44ced2]
+./proxy[0x4140bd]
+./proxy[0x410199]
+./proxy[0x40de89]
+./proxy[0x413e96]
+./proxy[0x40f661]
+./proxy[0x40c455]
+./proxy[0x40bc4b]
+./proxy[0x40b439]
+./proxy[0x40af03]
+/lib64/libc.so.6(__libc_start_main+0xfd)[0x30c001ed5d]
+./proxy[0x409b59]
+======= Memory map: ========
+00400000-004ad000 r-xp 00000000 00:10 23849208                           /dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy
+006ad000-006af000 rw-p 000ad000 00:10 23849208                           /dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy
+016b5000-016d6000 rw-p 00000000 00:00 0 
+016d6000-016d8000 rw-p 00000000 00:00 0 
+30bfc00000-30bfc20000 r-xp 00000000 fd:00 394782                         /lib64/ld-2.12.so
+30bfe1f000-30bfe20000 r--p 0001f000 fd:00 394782                         /lib64/ld-2.12.so
+30bfe20000-30bfe21000 rw-p 00020000 fd:00 394782                         /lib64/ld-2.12.so
+30bfe21000-30bfe22000 rw-p 00000000 00:00 0 
+30c0000000-30c018a000 r-xp 00000000 fd:00 401800                         /lib64/libc-2.12.so
+30c018a000-30c038a000 ---p 0018a000 fd:00 401800                         /lib64/libc-2.12.so
+30c038a000-30c038e000 r--p 0018a000 fd:00 401800                         /lib64/libc-2.12.so
+30c038e000-30c038f000 rw-p 0018e000 fd:00 401800                         /lib64/libc-2.12.so
+30c038f000-30c0394000 rw-p 00000000 00:00 0 
+30c0400000-30c0483000 r-xp 00000000 fd:00 401801                         /lib64/libm-2.12.so
+30c0483000-30c0682000 ---p 00083000 fd:00 401801                         /lib64/libm-2.12.so
+30c0682000-30c0683000 r--p 00082000 fd:00 401801                         /lib64/libm-2.12.so
+30c0683000-30c0684000 rw-p 00083000 fd:00 401801                         /lib64/libm-2.12.so
+30c0800000-30c0817000 r-xp 00000000 fd:00 394640                         /lib64/libpthread-2.12.so
+30c0817000-30c0a17000 ---p 00017000 fd:00 394640                         /lib64/libpthread-2.12.so
+30c0a17000-30c0a18000 r--p 00017000 fd:00 394640                         /lib64/libpthread-2.12.so
+30c0a18000-30c0a19000 rw-p 00018000 fd:00 394640                         /lib64/libpthread-2.12.so
+30c0a19000-30c0a1d000 rw-p 00000000 00:00 0 
+30c0c00000-30c0c02000 r-xp 00000000 fd:00 403129                         /lib64/libdl-2.12.so
+30c0c02000-30c0e02000 ---p 00002000 fd:00 403129                         /lib64/libdl-2.12.so
+30c0e02000-30c0e03000 r--p 00002000 fd:00 403129                         /lib64/libdl-2.12.so
+30c0e03000-30c0e04000 rw-p 00003000 fd:00 403129                         /lib64/libdl-2.12.so
+30c1000000-30c1015000 r-xp 00000000 fd:00 403126                         /lib64/libz.so.1.2.3
+30c1015000-30c1214000 ---p 00015000 fd:00 403126                         /lib64/libz.so.1.2.3
+30c1214000-30c1215000 r--p 00014000 fd:00 403126                         /lib64/libz.so.1.2.3
+30c1215000-30c1216000 rw-p 00015000 fd:00 403126                         /lib64/libz.so.1.2.3
+30c1400000-30c1407000 r-xp 00000000 fd:00 412660                         /lib64/librt-2.12.so
+30c1407000-30c1606000 ---p 00007000 fd:00 412660                         /lib64/librt-2.12.so
+30c1606000-30c1607000 r--p 00006000 fd:00 412660                         /lib64/librt-2.12.so
+30c1607000-30c1608000 rw-p 00007000 fd:00 412660                         /lib64/librt-2.12.so
+30c4400000-30c4425000 r-xp 00000000 fd:00 262955                         /usr/lib64/libpng12.so.0.49.0
+30c4425000-30c4625000 ---p 00025000 fd:00 262955                         /usr/lib64/libpng12.so.0.49.0
+30c4625000-30c4626000 rw-p 00025000 fd:00 262955                         /usr/lib64/libpng12.so.0.49.0
+30c6800000-30c6816000 r-xp 00000000 fd:00 403128                         /lib64/libgcc_s-4.4.7-20120601.so.1
+30c6816000-30c6a15000 ---p 00016000 fd:00 403128                         /lib64/libgcc_s-4.4.7-20120601.so.1
+30c6a15000-30c6a16000 rw-p 00015000 fd:00 403128                         /lib64/libgcc_s-4.4.7-20120601.so.1
+7fa6150f0000-7fa6150f5000 rw-p 00000000 00:00 0 
+7fa6150f5000-7fa615200000 r-xp 00000000 00:24 50341432                   /class/cs225/lm35/lib/libc++.so.1.0
+7fa615200000-7fa615400000 ---p 0010b000 00:24 50341432                   /class/cs225/lm35/lib/libc++.so.1.0
+7fa615400000-7fa615407000 rw-p 0010b000 00:24 50341432                   /class/cs225/lm35/lib/libc++.so.1.0
+7fa615407000-7fa61540b000 rw-p 00000000 00:00 0 
+7fa61542e000-7fa61542f000 rw-p 00000000 00:00 0 
+7fa61542f000-7fa615431000 rw-p 00000000 00:00 0 
+7fff8da92000-7fff8daa7000 rw-p 00000000 00:00 0                          [stack]
+7fff8dade000-7fff8dadf000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+----------------------------------------------------------------
+SceneDeletePictureInvalid [2 points]
+Result: FAILED: Segmentation fault
+Took 0ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+Valgrind3 (run under asan) [5 points]
+Result: FAILED: Memory errors detected by ASAN
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running Valgrind3 [worth 5 points, output below]
+=================================================================
+==14389==ERROR: AddressSanitizer: heap-use-after-free on address 0x60300000ef60 at pc 0x000000668d36 bp 0x7fff976bd110 sp 0x7fff976bd108
+READ of size 8 at 0x60300000ef60 thread T0
+    #0 0x668d35 in PNG::_clear() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x668d35)
+    #1 0x672ff8 in PNG::~PNG() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x672ff8)
+    #2 0x65bfeb in Image::~Image() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x65bfeb)
+    #3 0x68203a in Scene::changemaxlayers(int) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x68203a)
+    #4 0x6593a8 in proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x6593a8)
+    #5 0x4e6ab8 in monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4e6ab8)
+    #6 0x4cdec3 in proxy::test_execution::child_test() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4cdec3)
+    #7 0x4bfa19 in proxy::test_execution::child() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4bfa19)
+    #8 0x4ba2d2 in proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4ba2d2)
+    #9 0x4b4267 in proxy::RunTests::run_single_test(char const*) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4b4267)
+    #10 0x4b3407 in proxy::RunTests::execute_by_mode() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4b3407)
+    #11 0x4afb69 in proxy::RunTests::execute() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4afb69)
+    #12 0x4adc70 in main (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4adc70)
+    #13 0x30c001ed5c in __libc_start_main (/lib64/libc.so.6+0x30c001ed5c)
+    #14 0x4a67fc in _start (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4a67fc)
+
+0x60300000ef60 is located 16 bytes inside of 24-byte region [0x60300000ef50,0x60300000ef68)
+freed by thread T0 here:
+    #0 0x4222cb in operator delete(void*) /dev/shm/225/lm35/src/llvm/projects/compiler-rt/lib/asan/asan_new_delete.cc:94:3
+    #1 0x4dba71 in operator delete(void*, unsigned long) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4dba71)
+    #2 0x67d473 in Scene::clear() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x67d473)
+    #3 0x680c39 in Scene::changemaxlayers(int) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x680c39)
+    #4 0x6593a8 in proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x6593a8)
+    #5 0x4e6ab8 in monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4e6ab8)
+    #6 0x4cdec3 in proxy::test_execution::child_test() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4cdec3)
+    #7 0x4bfa19 in proxy::test_execution::child() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4bfa19)
+    #8 0x4ba2d2 in proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4ba2d2)
+    #9 0x4b4267 in proxy::RunTests::run_single_test(char const*) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4b4267)
+    #10 0x4b3407 in proxy::RunTests::execute_by_mode() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4b3407)
+    #11 0x4afb69 in proxy::RunTests::execute() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4afb69)
+    #12 0x4adc70 in main (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4adc70)
+    #13 0x30c001ed5c in __libc_start_main (/lib64/libc.so.6+0x30c001ed5c)
+
+previously allocated by thread T0 here:
+    #0 0x421d8b in operator new(unsigned long) /dev/shm/225/lm35/src/llvm/projects/compiler-rt/lib/asan/asan_new_delete.cc:62:35
+    #1 0x6829a2 in Scene::addpicture(char const*, int, int, int) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x6829a2)
+    #2 0x659245 in proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x659245)
+    #3 0x4e6ab8 in monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4e6ab8)
+    #4 0x4cdec3 in proxy::test_execution::child_test() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4cdec3)
+    #5 0x4bfa19 in proxy::test_execution::child() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4bfa19)
+    #6 0x4ba2d2 in proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4ba2d2)
+    #7 0x4b4267 in proxy::RunTests::run_single_test(char const*) (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4b4267)
+    #8 0x4b3407 in proxy::RunTests::execute_by_mode() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4b3407)
+    #9 0x4afb69 in proxy::RunTests::execute() (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4afb69)
+    #10 0x4adc70 in main (/dev/shm/cs225student/autograder/monad/monad/mp2_grade/proxy-asan+0x4adc70)
+    #11 0x30c001ed5c in __libc_start_main (/lib64/libc.so.6+0x30c001ed5c)
+
+SUMMARY: AddressSanitizer: heap-use-after-free ??:0 PNG::_clear()
+Shadow bytes around the buggy address:
+  0x0c067fff9d90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff9da0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff9db0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff9dc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff9dd0: fa fa 00 00 04 fa fa fa 00 00 04 fa fa fa 00 00
+=>0x0c067fff9de0: 04 fa fa fa fd fd fd fa fa fa fd fd[fd]fa fa fa
+  0x0c067fff9df0: 00 00 00 fa fa fa fd fd fd fd fa fa 00 00 00 fa
+  0x0c067fff9e00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff9e10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff9e20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff9e30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Heap right redzone:      fb
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack partial redzone:   f4
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  ASan internal:           fe
+==14389==ABORTING
+Result: FAILED:
+Memory Errors Detected by ASAN
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 85
+

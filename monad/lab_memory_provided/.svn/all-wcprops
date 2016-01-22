@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided
+END
+unit_tests.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided/unit_tests.cpp
+END
+config.ini
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided/config.ini
+END
+students.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided/students.txt
+END
+fileio.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided/fileio.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided/Makefile
+END
+fileio.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided/fileio.h
+END
+rooms.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/fa15-cs225/!svn/ver/7726/_shared/lab_memory_provided/rooms.txt
+END

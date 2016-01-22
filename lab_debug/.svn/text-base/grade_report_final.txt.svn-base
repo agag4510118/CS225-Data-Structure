@@ -1,0 +1,24 @@
+Grading revision r5003 by limiao2, dated 2015-09-02 22:09:24.000935569 -0500 CDT
+Monad Autograder
+Testing lab_debug at 2015-09-07 00:23:36
+
+"We are what we repeatedly do. Excellence, then, is not an act, but a habit." ~ Aristotle
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+no_segfaults . . . [20 pts] - passed
+produces_out_png . [10 pts] - passed
+similar_sketch . . [30 pts] - passed
+complete_in_01_png [20 pts] - passed
+complete_in_02_png [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
